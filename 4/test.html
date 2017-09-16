@@ -1,0 +1,23 @@
+<html>
+<body>
+</body>
+<b>实验4php数据交换<br/></b>
+ jquery xml json curl<br/>
+请实现weather.php并修改这个文件test4.html<br/>
+请用jquery实现<font color=red>无刷新</font>获取某个城市天气预报的功能，注意使用jquery要先从其<a href=http://jquery.com/>网站</a>上下载jquery-min-xx.js <br/>
+参考 <a href=http://www.phpwell.com/?p=297>http://www.phpwell.com/?p=297</a><br/>
+不过这个网站的例子使用file_get_contents实现，现在我们要求你用curl实现(要使用curl，可能要修改你的php.ini的设置)<br/>
+weather.php应该输出json格式的数据，jquery获得json数据以后构成table,这个table也就是例子中那个类似的他变了，显示在div id=result里面,
+注意php对html格式数据的处理
+<hr/>
+<form action=weather.php>
+<input type=text id=city name=city value='zhuhai'></input>
+<input type=submit value='查询'/>
+</form>
+查询的结果如下
+<div id=result>
+<table border=1>
+<tr><th>请用jquery在客户端用javascript利用返回的json数据构造好这个table的内容，现有的table内容需要被替换掉</th></tr>
+</table>
+</div>
+<html>

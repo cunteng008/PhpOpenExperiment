@@ -1,0 +1,37 @@
+[11-Sep-2017 15:27:50 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to undefined function dispatch() in D:\xampp\htdocs\foo\lib\components\contacts\entity.php:10
+Stack trace:
+#0 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1092): components_contacts_Entity->dispatch()
+#1 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1113): k_Component->forward('components_cont...')
+#2 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1092): k_Component->dispatch()
+#3 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1113): k_Component->forward('components_cont...')
+#4 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1526): k_Component->dispatch()
+#5 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1514): k_Bootstrap->dispatchRoot('components_Root')
+#6 D:\xampp\htdocs\foo\www\index.php(9): k_Bootstrap->run('components_Root')
+#7 {main}
+  thrown in D:\xampp\htdocs\foo\lib\components\contacts\entity.php on line 10
+[11-Sep-2017 15:30:38 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function full_name() on null in D:\xampp\htdocs\foo\lib\components\contacts\entity.php:13
+Stack trace:
+#0 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1192): components_contacts_Entity->renderHtml()
+#1 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1132): k_Component->render()
+#2 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1126): k_Component->GET()
+#3 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1115): k_Component->execute()
+#4 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1092): k_Component->dispatch()
+#5 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1113): k_Component->forward('components_cont...')
+#6 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1092): k_Component->dispatch()
+#7 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1113): k_Component->forward('components_cont...')
+#8 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1526): k_Component->dispatch()
+#9 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1514): k_Bootstrap->dispatchRoot('components_Root')
+ in D:\xampp\htdocs\foo\lib\components\contacts\entity.php on line 13
+[14-Sep-2017 08:38:24 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function all() on null in D:\xampp\htdocs\foo\lib\components\contacts\list.php:20
+Stack trace:
+#0 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1192): components_contacts_List->renderHtml()
+#1 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1132): k_Component->render()
+#2 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1126): k_Component->GET()
+#3 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1115): k_Component->execute()
+#4 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1092): k_Component->dispatch()
+#5 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1113): k_Component->forward('components_cont...')
+#6 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1526): k_Component->dispatch()
+#7 D:\xampp\htdocs\foo\konstrukt\konstrukt.inc.php(1514): k_Bootstrap->dispatchRoot('components_Root')
+#8 D:\xampp\htdocs\foo\www\index.php(9): k_Bootstrap->run('components_Root')
+#9 {main}
+  thrown in D:\xampp\htdocs\foo\lib\components\contacts\list.php on line 20
