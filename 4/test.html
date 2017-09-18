@@ -1,23 +1,45 @@
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 <body>
 </body>
-<b>ÊµÑé4phpÊı¾İ½»»»<br/></b>
- jquery xml json curl<br/>
-ÇëÊµÏÖweather.php²¢ĞŞ¸ÄÕâ¸öÎÄ¼ştest4.html<br/>
-ÇëÓÃjqueryÊµÏÖ<font color=red>ÎŞË¢ĞÂ</font>»ñÈ¡Ä³¸ö³ÇÊĞÌìÆøÔ¤±¨µÄ¹¦ÄÜ£¬×¢ÒâÊ¹ÓÃjqueryÒªÏÈ´ÓÆä<a href=http://jquery.com/>ÍøÕ¾</a>ÉÏÏÂÔØjquery-min-xx.js <br/>
-²Î¿¼ <a href=http://www.phpwell.com/?p=297>http://www.phpwell.com/?p=297</a><br/>
-²»¹ıÕâ¸öÍøÕ¾µÄÀı×ÓÊ¹ÓÃfile_get_contentsÊµÏÖ£¬ÏÖÔÚÎÒÃÇÒªÇóÄãÓÃcurlÊµÏÖ(ÒªÊ¹ÓÃcurl£¬¿ÉÄÜÒªĞŞ¸ÄÄãµÄphp.iniµÄÉèÖÃ)<br/>
-weather.phpÓ¦¸ÃÊä³öjson¸ñÊ½µÄÊı¾İ£¬jquery»ñµÃjsonÊı¾İÒÔºó¹¹³Étable,Õâ¸ötableÒ²¾ÍÊÇÀı×ÓÖĞÄÇ¸öÀàËÆµÄËû±äÁË£¬ÏÔÊ¾ÔÚdiv id=resultÀïÃæ,
-×¢Òâphp¶Ôhtml¸ñÊ½Êı¾İµÄ´¦Àí
-<hr/>
-<form action=weather.php>
-<input type=text id=city name=city value='zhuhai'></input>
-<input type=submit value='²éÑ¯'/>
-</form>
-²éÑ¯µÄ½á¹ûÈçÏÂ
-<div id=result>
-<table border=1>
-<tr><th>ÇëÓÃjqueryÔÚ¿Í»§¶ËÓÃjavascriptÀûÓÃ·µ»ØµÄjsonÊı¾İ¹¹ÔìºÃÕâ¸ötableµÄÄÚÈİ£¬ÏÖÓĞµÄtableÄÚÈİĞèÒª±»Ìæ»»µô</th></tr>
-</table>
-</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#submit").click(function(){
+		  		  txt=$("#city").val();
+				  $.post("weather.php",{city:txt},function(result){
+					  	var obj =  eval("("+ result +")");;
+					  	//$("#high").html(result);
+					  	$("#date").html("æ—¥æœŸ "+obj.data.forecast[0].date);
+					  	$("#sunrise").html("å¤ªé˜³å‡èµ·æ—¶åˆ» "+obj.data.forecast[0].sunrise);
+					    $("#high").html(obj.data.forecast[0].high);
+					    $("#low").html(obj.data.forecast[0].low);
+					    $("#sunset").html("å¤ªé˜³ä¸‹è½æ—¶åˆ» "+obj.data.forecast[0].sunset);
+					    $("#aqi").html("ç©ºæ°”è´¨é‡æŒ‡æ•° "+obj.data.forecast[0].aqi);
+					    $("#fl").html("é£é€Ÿ "+obj.data.forecast[0].fl);
+					    $("#type").html("å¤©æ°” "+obj.data.forecast[0].type);
+					    $("#notice").html("æ³¨æ„ "+obj.data.forecast[0].notice);
+
+				  });
+			});
+		});
+	</script>
+	
+		<input type=text id=city name=city value='zhuhai'></input>
+		<button id=submit>æœç´¢</button>
+	
+	
+	
+	<br/>æŸ¥è¯¢çš„ç»“æœå¦‚ä¸‹
+	<div id=result>
+		<p id=date></p>
+		<p id=sunrise></p>
+		<p id=high></p>
+		<p id=low></p>
+		<p id=sunset></p>
+		<p id=aqi></p>
+		<p id=fl></p>
+		<p id=type></p>
+		<p id=notice></p>
+	</div>
 <html>
